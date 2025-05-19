@@ -1,0 +1,40 @@
+.drag-drop-area {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.drag-drop-area:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.border-dashed {
+  border-style: dashed !important;
+  border-width: 2px !important;
+}
+
+.file-preview {
+  width: 100%;
+}
+
+/* Animation for drag over state */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(13, 110, 253, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+  }
+}
+
+.drag-drop-area.border-primary {
+  animation: pulse 1.5s infinite;
+  border-width: 2px !important;
+}
